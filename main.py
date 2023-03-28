@@ -50,10 +50,10 @@ class MainWindow(QMainWindow):
 
             # Преобразуем данные в массив RR интервалов
             self.t = np.linspace(0, 1, len(self.data))
-            self.cwtmatr, self.freqs = pywt.cwt(self.data, np.arange(1, 100), 'mexh')
+            self.cwtmatr, self.freqs = pywt.cwt(self.data, np.arange(1, 100), 'mexh', 1/200)
 
-            for i in range(len(self.freqs)):
-                self.freqs[i] = self.freqs[i]*1000 + 10
+            # for i in range(len(self.freqs)):
+            #     self.freqs[i] = self.freqs[i]*1000 + 10
 
     def plot(self):
         plt.plot(self.t, self.data, label="Исходный сигнал")
