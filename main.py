@@ -64,7 +64,7 @@ class MainWindow(QMainWindow):
         plt.imshow(abs(self.cwtmatr), extent=[0, len(self.data), self.freqs[-1], self.freqs[0]], cmap='viridis', aspect='auto',
                    label="Спокойное состояние")
         plt.colorbar()
-        plt.xlabel('Время [с]')
+        plt.xlabel('Отсчеты (шт)')
         plt.ylabel('Частота [Гц]')
         plt.show()
 
